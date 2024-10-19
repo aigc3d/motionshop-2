@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Motionshop-2, A Animation Engine for Your Photos!">
+  <meta name="keywords" content="Motionshop, robot, avatar, digital human, AI, character replacement">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motionshop-2 </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQDC0FLLLN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-NQDC0FLLLN');
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://github.com/aigc3d">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://aigc3d.github.io/richdreamer">
+            RichDreamer
+          </a>
+          <a class="navbar-item" href="https://aigc3d.github.io/gobjaverse/">
+            G-buffer Objaverse
+          </a>
+          <a class="navbar-item" href="https://aigc3d.github.io/motionshop/">
+           Motionshop 
+          <a class="navbar-item" href="https://github.com/Stable-X/StableNormal">
+            StableNormal
+          <a class="navbar-item" href="https://aigc3d.github.io/Sparse3D/">
+            Sparse3D
+          <a class="navbar-item" href="https://aigc3d.github.io/VideoMV">
+            VideoMV
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Motionshop-2</h1>
+
+          <div class="is-size-5 publication-authors">
+            <!-- Paper authors -->
+            <span class="author-block">
+            <a href="https://lingtengqiu.github.io/" target="_blank">Lingteng Qiu</a><sup>1</sup>,</span>
+            <a href="" target="_blank">Junfei Zhang</a><sup>2</sup>,</span>
+            <a href="" target="_blank">Chao Xu</a><sup>2</sup>,</span>
+            <a href="https://scholar.google.com.hk/citations?user=aJPO514AAAAJ&hl=zh-CN&oi=ao" target="_blank">Xiaodong Gu</a><sup>1</sup>,</span>
+            <a href="https://github.com/ShenhaoZhu" target="_blank">Shenhao Zhu</a><sup>1</sup>,</span>
+            <a href="" target="_blank">Qi Zuo</a><sup>1</sup>,</span>
+            <a href="" target="_blank">Xiaodan Ye</a><sup>2</sup>,</span>
+            <br>
+            <a href="" target="_blank">Weichao Shen</a><sup>1</sup>,</span>
+            <a href="" target="_blank">Peihao Li</a><sup>1</sup>,</span>
+            <a href="https://weihao-yuan.com/" target="_blank">Weihao Yuan</a><sup>1</sup>,</span>
+            <a href="" target="_blank">Gang Cheng</a><sup>*</sup>,</span>
+            <a href="https://scholar.google.com/citations?user=GHOQKCwAAAAJ&amp;hl=zh-CN&amp;oi=ao" target="_blank">Zilong Dong</a><sup>1+</sup>,</span>
+            <a href="https://scholar.google.com/citations?user=FJwtMf0AAAAJ&amp;hl=zh-CN" target="_blank">Liefeng Bo</a><sup></sup>,</span>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Institute for Intelligent Computing, Alibaba Group</span>
+
+            <span class="eql-cntrb"><small><br><sup>1</sup>3D AIGC &nbsp;</small></span>
+            <span class="eql-cntrb"><small><sup>2</sup>TIDE Rendering &nbsp;</small></span>
+            <span class="eql-cntrb"><small><sup>+</sup>Project Lead &nbsp;</small></span>
+            <span class="eql-cntrb"><small><sup>*</sup>Engineering Lead</small></span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/embed/6gQ1VWiKoc0?si=Q7yL4mWmBN3cUaYi"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>YouTube</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>BiliBili</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-medium is-rounded is-dark">
+                  <span>Live Demo (Coming Soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://m.tongyi.aliyun.com/app/tongyi/tongyi-hybrid/download-app?spm=5176.29169716&code=peftkjdk0x" target="_blank"
+                   class="external-link button is-medium is-rounded  is-dark">
+                  <!-- <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span> -->
+                  <span>Tongyi App (Coming Soon)</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href="https://github.com/aigc3d/motionshop"
+                   class="external-link button is-medium is-rounded  is-dark">
+                  <span>Github</span>
+                </a>
+              </span> -->
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <div id="results-carousel" class="carousel results-carousel">
+              <div class="item item-apple">
+                <video poster="" id="teaser_apple_launch" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/teaser_apple_launch.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-dance_girl">
+                <video poster="" id="dance_girl" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/teaser1.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-dance_girl">
+                <video poster="" id="dance_girl" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/teaser_dance.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-dance_keli">
+                <video poster="" id="dance_keli" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/teaser_mike.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-dance_keli">
+                <video poster="" id="dance_keli" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/teaser2.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-dance_keli">
+                <video poster="" id="dance_keli" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/animation_boluo.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <!-- <div class="item item-dance_robot">
+                <video poster="" id="dance_robot" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/teaser1.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-dance_robot">
+                <video poster="" id="dance_robot" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/teaser1.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-kongfu_pig">
+                <video poster="" id="kongfu_pig" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/teaser1.mp4"
+                          type="video/mp4">
+                </video>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <h3 class="title is-4">Abstract</h3>
+          <p>
+            We present Motionshop-2, an advanced version of the original 
+            <a href="https://aigc3d.github.io/motionshop/" target="_blank">Motionshop</a>, 
+            which improves three core modules and adds an essential feature. 
+            The improvements in the three core modules are as follows: (1) the inpainting module has undergone substantial optimization, 
+            resulting in significantly improved processing speed; 
+            (2) the accuracy of the human pose estimation module has greatly improved compared to the previous version; 
+            and (3) the overall rendering quality of our system is considerably better than before, particularly in terms of visual perception.
+             As for the new feature, Motionshop-2 introduces hybrid rendering, allowing for the simultaneous rendering of 3D Gaussian model and manually designed traditional meshes in certain scenes. 
+             To enable users better explore our new feature, we design a fancy system, namely <a href="https://github.com/aigc3d/GAGA" target="_blank" >GA^2</a>, that can efficiently produce realistic animatable 3D gaussian avatar from single image.
+          </p>
+          <img src="./static/images/architecture.png">
+
+          <!-- Upgrades. -->
+          <h3 class="title is-4">Upgrades</h3>
+          <p>
+            <h4 class="title is-6">Video Inpainting</h4>
+            <p>
+              In this update, we have made substantial engineering optimizations to the video inpainting module. 
+              Consequently, the generation speed has improved by 20%, and the quality of the generated videos has not degraded compared to the previous version. 
+              These enhancements ensure a more efficient workflow and a smoother user experience, making it easier to achieve high-quality video restoration with faster processing time.
+            </p>
+            <h4 class="title is-6">Human Pose Estimation</h4>
+            <p>
+              In this update, we first collect a large-scale dataset of human video sequences 
+              and run an off-the-shelf human pose estimator to predict SMPL-X parameters. 
+              Sequentially, we manually correct any incorrect predictions of SMPL-X. 
+              Then, we fine-tune the SMPL-X estimator on our new dataset. 
+              Compared to the previous version, our new model achieves significant improvements, especially in foots and hands locations. 
+              Additionally, we incorporate a temporal regularization term to enhance the smoothness of the output of the SMPL-X sequence. 
+              These enhancements allow Motionshop-2 to generate smoother and more accurate human animation sequences.
+            </p>
+            <h4 class="title is-6">Unitide Rendering</h4>
+            In this update, Our rendering pipeline expand its ability to 
+            support hybrid rendering of triangle mesh with 3D gaussian splates. 
+            Additionally, our TIDE team has substantially optimized and updated the core rendering algorithm, 
+            resulting in more realistic and vivid rendering quality.
+            <p>
+            </p>
+          </p>
+
+          <h3 class="title is-4">New Feature 🔥🔥🔥</h3>
+          <p>
+          We are excited to announce a significant update that introduces a new feature: Hybrid Rendering Support. 
+          This enhancement allows for the simultaneous rendering of generated Gaussian models and manually designed traditional meshes. 
+          To enable users to explore our new features, we present a fancy Gaussian model generation system: 3D Animation Engine for Your Photos!
+
+            <br>
+            <h4 class="title is-6">3D Animation Engine for your Photos</h4>
+            <p>
+            Generating animatable characters from a single image is challenging due to the lack of sufficient global information when relying solely on that image. 
+            Recently, our community has witnessed the bloom of diffusion-based image-to-video (I2V) models and their extensions. 
+            Several pioneering works, like <a href="https://humanaigc.github.io/animate-anyone/" target="_blank" >Animate Anyone</a>, 
+            <a href="https://fudan-generative-vision.github.io/champ/#/" target="_blank" >Champ</a>, 
+            and <a href="https://menyifang.github.io/projects/MIMO/index.html" target="_blank" >MIMO</a>, have explored how to generate human animation videos conditioned on the reference image and human motion hints. 
+            Although these diffusion-based human animation methods obtain compelling results, they are time-consuming and memory-intensive. 
+            <br>
+            <br>
+
+            In this project, we propose a fancy Gaussian model generation system that not only effectively generates animatable characters from any single image input but also achieves competitive results compared to 
+            diffusion-based human animation approaches. Instead of generating each frame solely based on a video diffusion model without an intermediate  representation, 
+            we utilize 3D Gaussian Splatting (3DGS) as a representation to reconstruct an A-pose 3D character informed by a multi-view diffusion prior model. 
+            More details can be found in <a href="https://github.com/aigc3d/GAGA" target="_blank" >GA^2</a>. 
+            3DGS avatar can be seamlessly integrated into our Motionshop-2 once generated.
+            Notably, our model requires only a single run and enables real-time animation on an RTX 3090 with 24GB of memory. 
+            </p>
+
+
+            <!-- animation video -->
+            <h4 class="title is-6">3D Pose Animation</h4>
+            <p>
+              <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                  <div class="column is-four-fifths">
+                      <div id="results-carousel" class="carousel results-carousel">
+                        <div class="item item-dance_girl">
+                          <video poster="" id="dance_girl" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos/animation1.mp4"
+                                    type="video/mp4">
+                          </video>
+                        </div>
+                        <div class="item item-dance_robot">
+                          <video poster="" id="dance_robot" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos/animation2.mp4"
+                                    type="video/mp4">
+                          </video>
+                        </div>
+                        <div class="item item-kongfu_pig">
+                          <video poster="" id="kongfu_pig" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos/animation3.mp4"
+                                    type="video/mp4">
+                          </video>
+                        </div>
+                        <div class="item item-kongfu_pig">
+                          <video poster="" id="kongfu_pig" autoplay controls muted loop playsinline height="100%">
+                            <source src="./static/videos/animation4.mp4"
+                                    type="video/mp4">
+                          </video>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </p>
+
+
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <video id="teaser" autoplay="" muted="true" loop="" playsinline="" height="100%">
+            <source src="./static/videos/dance.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p> Website template from <a href="https://nerfies.github.io//">Nerfies</a>. We thank the authors for the open-source code </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
