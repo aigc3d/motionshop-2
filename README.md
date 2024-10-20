@@ -20,7 +20,7 @@ resulting in significantly improved processing speed;
 (2) the accuracy of the human pose estimation module has greatly improved compared to the previous version; 
 and (3) the overall rendering quality of our system is considerably better than before, particularly in terms of visual perception.
 As for the new feature, Motionshop-2 introduces hybrid rendering, allowing for the simultaneous rendering of 3D Gaussian model and manually designed traditional meshes in certain scenes. 
-To enable users better explore our new feature, we design a fancy system, namely <a href="https://github.com/aigc3d/GAGA" target="_blank" >GA^2</a>, that can efficiently produce realistic animatable 3D gaussian avatar from single image. For further information, please refer to our <a href="https://aigc3d.github.io/motionshop/" target="_blank">project</a>!
+To enable users better explore our new feature, we design a fancy system, namely <a href="https://github.com/aigc3d/GAGA" target="_blank" >GA^2</a>, that can efficiently produce realistic animatable 3D gaussian avatar from single image. For further information, please refer to our <a href="https://aigc3d.github.io/motionshop-2/" target="_blank">project</a>!
 
 
 <p align="center">
