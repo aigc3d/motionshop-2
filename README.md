@@ -10,7 +10,7 @@ An application of replacing the characters in video with 3D avatars.
 
 </div>
 <p align="center">
-  <img src="./static/images/architecture.png" width="100%">
+  <img src="./docs/static/images/architecture.png" width="100%">
 </p>
 We present Motionshop-2, an advanced version of the original 
 <a href="https://aigc3d.github.io/motionshop/" target="_blank">Motionshop</a>, 
@@ -24,7 +24,7 @@ To enable users better explore our new feature, we design a fancy system, namely
 
 
 <p align="center">
-  <img src="./static/videos/teaser_apple_launch.gif" width="100%">
+  <img src="./docs/static/videos/teaser_apple_launch.gif" width="100%">
 </p>
 
 ## 📜 News
