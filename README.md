@@ -1,8 +1,14 @@
-# MotionShop
+# Motionshop-2
 An application of replacing the characters in video with 3D avatars.
 
-<a href='https://aigc3d.github.io/motionshop-2/'><img src='https://img.shields.io/badge/Project-Page-Green'></a> 
-<a href=""  style='padding-left: 0.5rem;'><img src='https://img.shields.io/badge/ModelScope-MotionShop-orange'></a>
+<div align="center">
+
+[![Paper](https://img.shields.io/badge/arXiv-PDF-b31b1b)]() 
+[![Website](https://raw.githubusercontent.com/prs-eth/Marigold/main/doc/badges/badge-website.svg)](https://aigc3d.github.io/motionshop-2)
+[![ModelScope](https://img.shields.io/badge/%20ModelScope%20-Space-blue)]() 
+[![License](https://img.shields.io/badge/License-Apache--2.0-929292)](https://www.apache.org/licenses/LICENSE-2.0) 
+
+</div>
 <p align="center">
   <img src="./static/images/architecture.png" width="100%">
 </p>
@@ -16,10 +22,10 @@ and (3) the overall rendering quality of our system is considerably better than 
 As for the new feature, Motionshop-2 introduces hybrid rendering, allowing for the simultaneous rendering of 3D Gaussian model and manually designed traditional meshes in certain scenes. 
 To enable users better explore our new feature, we design a fancy system, namely <a href="https://github.com/aigc3d/GAGA" target="_blank" >GA^2</a>, that can efficiently produce realistic animatable 3D gaussian avatar from single image. For further information, please refer to our <a href="https://aigc3d.github.io/motionshop/" target="_blank">project</a>!
 
-<video width="100%" height="100%" controls>
-  <source src="./static/videos/teaser_apple_launch.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+
+<p align="center">
+  <img src="./static/videos/teaser_apple_launch.gif" width="100%">
+</p>
 
 ## 📜 News
 
