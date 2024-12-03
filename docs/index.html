@@ -61,6 +61,9 @@
           More Research
         </a>
         <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://lingtengqiu.github.io/2024/AniGS/">
+           AniGS 
+          </a>
           <a class="navbar-item" href="https://aigc3d.github.io/richdreamer">
             RichDreamer
           </a>
@@ -104,6 +107,7 @@
             <a href="" target="_blank">Weichao Shen</a><sup>1</sup>,</span>
             <a href="" target="_blank">Peihao Li</a><sup>1</sup>,</span>
             <a href="https://weihao-yuan.com/" target="_blank">Weihao Yuan</a><sup>1</sup>,</span>
+            <a href="" target="_blank">Mingyang Huang</a><sup>1</sup>,</span>
             <a href="" target="_blank">Gang Cheng</a><sup>*</sup>,</span>
             <a href="https://scholar.google.com/citations?user=GHOQKCwAAAAJ&amp;hl=zh-CN&amp;oi=ao" target="_blank">Zilong Dong</a><sup>1+</sup>,</span>
             <a href="https://scholar.google.com/citations?user=FJwtMf0AAAAJ&amp;hl=zh-CN" target="_blank">Liefeng Bo</a><sup></sup>,</span>
@@ -172,64 +176,10 @@
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
-          <div class="column is-four-fifths">
-            <div id="results-carousel" class="carousel results-carousel">
-              <div class="item item-apple">
-                <video poster="" id="teaser_apple_launch" autoplay controls muted loop playsinline height="100%">
-                  <source src="./static/videos/teaser_apple_launch.mp4"
-                          type="video/mp4">
-                </video>
-              </div>
-              <div class="item item-dance_girl">
-                <video poster="" id="dance_girl" autoplay controls muted loop playsinline height="100%">
-                  <source src="./static/videos/teaser1.mp4"
-                          type="video/mp4">
-                </video>
-              </div>
-              <div class="item item-dance_girl">
-                <video poster="" id="dance_girl" autoplay controls muted loop playsinline height="100%">
-                  <source src="./static/videos/teaser_dance.mp4"
-                          type="video/mp4">
-                </video>
-              </div>
-              <div class="item item-dance_keli">
-                <video poster="" id="dance_keli" autoplay controls muted loop playsinline height="100%">
-                  <source src="./static/videos/teaser_mike.mp4"
-                          type="video/mp4">
-                </video>
-              </div>
-              <div class="item item-dance_keli">
-                <video poster="" id="dance_keli" autoplay controls muted loop playsinline height="100%">
-                  <source src="./static/videos/teaser2.mp4"
-                          type="video/mp4">
-                </video>
-              </div>
-              <div class="item item-dance_keli">
-                <video poster="" id="dance_keli" autoplay controls muted loop playsinline height="100%">
-                  <source src="./static/videos/animation_boluo.mp4"
-                          type="video/mp4">
-                </video>
-              </div>
-              <!-- <div class="item item-dance_robot">
-                <video poster="" id="dance_robot" autoplay controls muted loop playsinline height="100%">
-                  <source src="./static/videos/teaser1.mp4"
-                          type="video/mp4">
-                </video>
-              </div>
-              <div class="item item-dance_robot">
-                <video poster="" id="dance_robot" autoplay controls muted loop playsinline height="100%">
-                  <source src="./static/videos/teaser1.mp4"
-                          type="video/mp4">
-                </video>
-              </div>
-              <div class="item item-kongfu_pig">
-                <video poster="" id="kongfu_pig" autoplay controls muted loop playsinline height="100%">
-                  <source src="./static/videos/teaser1.mp4"
-                          type="video/mp4">
-                </video>
-              </div> -->
-            </div>
-          </div>
+          <video poster="" id="teaser_apple_launch" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/motionshop-2.mp4"
+                    type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
@@ -251,10 +201,15 @@
             (2) the accuracy of the human pose estimation module has greatly improved compared to the previous version; 
             and (3) the overall rendering quality of our system is considerably better than before, particularly in terms of visual perception.
              As for the new feature, Motionshop-2 introduces hybrid rendering, allowing for the simultaneous rendering of 3D Gaussian model and manually designed traditional meshes in certain scenes. 
-             To enable users better explore our new feature, we design a fancy system, namely <a href="https://github.com/aigc3d/GAGA" target="_blank" >GA^2</a>, that can efficiently produce realistic animatable 3D gaussian avatar from single image.
+             To enable users better explore our new feature, we design a fancy system, namely <a href="https://github.com/aigc3d/AniGS" target="_blank" >AniGS</a>, that can efficiently produce realistic animatable 3D gaussian avatar from single image.
           </p>
           <img src="./static/images/architecture.png">
 
+          <!-- animation video -->
+          <h3 class="title is-4">More Visual Results </h3>
+          <p>
+            Please refer to <a href="https://lingtengqiu.github.io/2024/AniGS/" target="_blank" >AniGS!</a>
+          </p>
           <!-- Upgrades. -->
           <h3 class="title is-4">Upgrades</h3>
           <p>
@@ -304,48 +259,12 @@
             In this project, we propose a fancy Gaussian model generation system that not only effectively generates animatable characters from any single image input but also achieves competitive results compared to 
             diffusion-based human animation approaches. Instead of generating each frame solely based on a video diffusion model without an intermediate  representation, 
             we utilize 3D Gaussian Splatting (3DGS) as a representation to reconstruct an A-pose 3D character informed by a multi-view diffusion prior model. 
-            More details can be found in <a href="https://github.com/aigc3d/GAGA" target="_blank" >GA^2</a>. 
+            More details can be found in <a href="https://github.com/aigc3d/AniGS" target="_blank" >AniGS</a>. 
             3DGS avatar can be seamlessly integrated into our Motionshop-2 once generated.
             Notably, our model requires only a single run and enables real-time animation on an RTX 3090 with 24GB of memory. 
             </p>
 
 
-            <!-- animation video -->
-            <h4 class="title is-6">Result Gallery</h4>
-            <p>
-              <div class="container is-max-desktop">
-                <div class="columns is-centered">
-                  <div class="column is-four-fifths">
-                      <div id="results-carousel" class="carousel results-carousel">
-                        <div class="item item-dance_girl">
-                          <video poster="" id="dance_girl" autoplay controls muted loop playsinline height="100%">
-                            <source src="./static/videos/animation1.mp4"
-                                    type="video/mp4">
-                          </video>
-                        </div>
-                        <div class="item item-dance_robot">
-                          <video poster="" id="dance_robot" autoplay controls muted loop playsinline height="100%">
-                            <source src="./static/videos/animation2.mp4"
-                                    type="video/mp4">
-                          </video>
-                        </div>
-                        <div class="item item-kongfu_pig">
-                          <video poster="" id="kongfu_pig" autoplay controls muted loop playsinline height="100%">
-                            <source src="./static/videos/animation3.mp4"
-                                    type="video/mp4">
-                          </video>
-                        </div>
-                        <div class="item item-kongfu_pig">
-                          <video poster="" id="kongfu_pig" autoplay controls muted loop playsinline height="100%">
-                            <source src="./static/videos/animation4.mp4"
-                                    type="video/mp4">
-                          </video>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-            </p>
 
 
         </div>
