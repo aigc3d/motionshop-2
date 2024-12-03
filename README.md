@@ -2,6 +2,7 @@
 An application of replacing the characters in video with 3D avatars.
 
 <div align="center">
+  
 [![Website](https://raw.githubusercontent.com/prs-eth/Marigold/main/doc/badges/badge-website.svg)](https://aigc3d.github.io/motionshop-2)
 [![ModelScope](https://img.shields.io/badge/%20ModelScope%20-Space-blue)]() 
 [![License](https://img.shields.io/badge/License-Apache--2.0-929292)](https://www.apache.org/licenses/LICENSE-2.0) 
